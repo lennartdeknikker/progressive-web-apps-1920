@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 :root {
   --spacex-blue: #005288;
   --spacex-silver: #a7a9ac;
@@ -10,7 +12,7 @@
   --max-width: 80rem;
   --line-height: 1.4rem;
 
-  --banner-background: url("../img/missions-header.jpg") !important;
+  --banner-background: url("../images/missions-header.jpg");
 }
 
 body {

@@ -2,17 +2,17 @@
   <ul class="header-menu-list">
     <li class="header-menu-list-item">
       <a
-        href="/upcoming"
+        href="index.html"
         id="button-upcoming-launches"
-        class="<% if (site.projects.activeButton === 'upcoming') { %> active <% } %>"
+        class="<% if (site.pageData.activeButton === 'upcoming') { %> active <% } %>"
         ><span>UPCOMING LAUNCHES</span></a
       >
     </li>
     <li class="header-menu-list-item">
       <a
-        href="/past"
+        href="past.html"
         id="button-past-launches"
-        class="<% if (site.projects.activeButton === 'past') { %> active <% } %>"
+        class="<% if (site.pageData.activeButton === 'past') { %> active <% } %>"
         ><span>PAST LAUNCHES</span></a
       >
     </li>

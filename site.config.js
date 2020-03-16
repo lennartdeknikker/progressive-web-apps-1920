@@ -1,8 +1,16 @@
-const projects = require('./src/data/past');
+const Index = require('./src/data/index');
+const Past = require('./src/data/past');
 
-module.exports = {
-  site: {
-    title: 'SpaceX | Launch Manifest',
-    projects,
-  },
-};
+async function createDataObject(pageTitle) {
+  if (pageTitle === 'index') {
+    return Index.getData();
+  }
+
+  if (pageTitle === 'past') {
+    return Past.getData();
+  }
+
+  return 'nothing here';
+}
+
+module.exports = createDataObject;

@@ -1,14 +1,14 @@
 <section class="list-view">
-  <h2 class="list-title"><%= site.projects.type.list %> Launches</h2>
+  <h2 class="list-title"><%= site.pageData.type.list %> Launches</h2>
   <ol class="launches-list">
-    <% for( let launchItem of site.projects.listData ) { %>
+    <% for( let launchItem of site.pageData.listData ) { %>
     <li
       class="launches-list-item flight-<%= launchItem.data.flightNumber %> "
       data-flightnumber="<%= launchItem.data.flightNumber %> "
     >
       <a
         class="launch-link"
-        href="/details/<%= site.projects.type.list %>/<%= launchItem.data.flightNumber %> "
+        href="/details/<%= site.pageData.type.list %>/<%= launchItem.data.flightNumber %> "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span><%=
@@ -32,7 +32,7 @@
           </li>
         </ul></a
       >
-      <% if (site.projects.type.list === 'past') { %>
+      <% if (site.pageData.type.list === 'past') { %>
       <img class="icon" src="<%= launchItem.links.patch %> " />
       <% } %>
     </li>

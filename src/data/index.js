@@ -1,23 +1,23 @@
 const Data = require('../helpers/data');
 
-const Past = {
+const Index = {
   async getData() {
     const data = {
       site: {
         title: 'SpaceX | Launch Manifest',
         pageData: {
-          title: 'Past launches',
-          activeButton: 'past',
+          title: 'Upcoming launches',
+          activeButton: 'upcoming',
           type: {
-            showcase: 'latest',
-            list: 'past',
+            showcase: 'next',
+            list: 'upcoming',
           },
         },
       },
     };
 
-    const showcaseData = await Data.showcase('latest');
-    const listData = await Data.list('past');
+    const showcaseData = await Data.showcase('next');
+    const listData = await Data.list('upcoming');
     const bannerData = await Data.banner();
 
     data.site.pageData.showcaseData = showcaseData;
@@ -28,4 +28,4 @@ const Past = {
   },
 };
 
-module.exports = Past;
+module.exports = Index;

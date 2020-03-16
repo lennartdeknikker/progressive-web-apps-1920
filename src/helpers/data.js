@@ -46,11 +46,6 @@ const Data = {
     parsedData.sort((a, b) => b.data.flightNumber - a.data.flightNumber);
     return parsedData;
   },
-
-  async detailView(selector) {
-    return Api.get(selector);
-  },
-
 };
 
 module.exports = Data;

@@ -71,4 +71,4 @@ const Utilities = {
   },
 };
 
-export default Utilities;
+module.exports = Utilities;

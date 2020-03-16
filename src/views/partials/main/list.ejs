@@ -1,3 +1,65 @@
 <section class="list-view">
-  <h2 class="list-title">Upcoming Launches</h2>
+  <h2 class="list-title"><%= type.list %> Launches</h2>
+  <ol class="launches-list">
+    <% for( let launchItem of listData ) { %>
+    <li
+      class="launches-list-item flight-<%= launchItem.data.flightNumber %> "
+      data-flightnumber="<%= launchItem.data.flightNumber %> "
+    >
+      <a class="launch-link" href="/#/past/<%= launchItem.data.flightNumber %> "
+        ><ul class="launches-list-item-details-list">
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Mission title: </span><%=
+            launchItem.data.missionTitle %>
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Flight number: </span><%=
+            launchItem.data.flightNumber %>
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Rocket title: </span><%=
+            launchItem.data.rocketTitle %>
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch site: </span><%=
+            launchItem.data.launchSite %>
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch date: </span><%=
+            launchItem.data.launchDate %> 05:50
+          </li>
+        </ul></a
+      >
+      <% if (type.list === 'past') { %>
+      <img class="icon" src="<%= launchItem.links.patch %> " />
+      <% } %>
+    </li>
+    <% } %>
+
+    <li class="launches-list-item flight-90" data-flightnumber="90">
+      <a class="launch-link" href="/#/past/90"
+        ><ul class="launches-list-item-details-list">
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Mission title: </span>Starlink 4
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Flight number: </span>90
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Rocket title: </span>Falcon 9
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch site: </span>CCAFS SLC 40
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch date: </span>17/02/2020
+            16:05
+          </li>
+        </ul></a
+      ><img
+        class="icon"
+        src="https://images2.imgbox.com/9a/96/nLppz9HW_o.png"
+      />
+    </li>
+  </ol>
 </section>

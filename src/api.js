@@ -1,6 +1,7 @@
-const Api = {
+const fetch = require('node-fetch');
 
-  async fetch(data) {
+const Api = {
+  async get(data) {
     const endpoint = 'https://api.spacexdata.com/v3/';
     const requestOptions = {
       method: 'GET',
@@ -17,7 +18,8 @@ const Api = {
             status: response.status,
             statusText: response.statusText,
           }));
-        });
+        },
+      );
     }
 
     function handleTextResponse(response) {
@@ -29,7 +31,8 @@ const Api = {
             statusText: response.statusText,
             err: text,
           }));
-        });
+        },
+      );
     }
 
     function handleResponse(response) {
@@ -39,20 +42,11 @@ const Api = {
       throw new Error(`Sorry, content-type ${contentType} is not supported.`);
     }
 
-    return fetch(`${endpoint + data}`, requestOptions)
+    return fetch(`${endpoint}launches/${data}`, requestOptions)
       .then(handleResponse)
       .catch((error) => console.log(error));
   },
 
-  async get(address) {
-    const localData = sessionStorage.getItem(address)
-    if (!localData) {
-      const newData = await Api.fetch(`launches/${address}`);
-      sessionStorage.setItem(address, JSON.stringify(newData));
-    }
-    return JSON.parse(sessionStorage.getItem(address));
-  },
-
 };
 
-export default Api;
+module.exports = Api;

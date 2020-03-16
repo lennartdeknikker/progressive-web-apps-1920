@@ -1,4 +1,5 @@
 {
+  "plugins": ["ejs"],
   "env": {
     "browser": true,
     "commonjs": true,

@@ -1,30 +1,30 @@
 <section class="showcase">
-  <h2 class="showcase-title"><%= type.showcase %> launch</h2>
+  <h2 class="showcase-title"><%= site.projects.type %> launch</h2>
   <div>
     <div class="showcase-image-titles-container">
       <ul class="showcase-titles-container">
         <li class="dynamic-content-showcase">
           <span class="info-type">MISSION</span>
-          <%= showcaseData.flightNumber %>, <%= showcaseData.missionTitle %> 
+          <%= site.projects.showcaseData.flightNumber %>, <%= site.projects.showcaseData.missionTitle %> 
         </li>
         <li class="dynamic-content-showcase">
           <span class="info-type">ROCKET</span>
-          <%= showcaseData.rocketTitle %> 
+          <%= site.projects.showcaseData.rocketTitle %> 
         </li>
         <li class="dynamic-content-showcase">
           <span class="info-type">LAUNCH SITE</span>
-          <%= showcaseData.launchSite %> 
+          <%= site.projects.showcaseData.launchSite %> 
         </li>
       </ul>
       <div class="showcase-image-container">
-        <img class="dynamic-content-showcase" src="<%= showcaseData.imageUrl %> ">
+        <img class="dynamic-content-showcase" src="<%= site.projects.showcaseData.imageUrl %> ">
       </div>
     </div>
     <div class="showcase-details-container">
       <p class="dynamic-content-showcase">
-        <%= showcaseData.details %> 
+        <%= site.projects.showcaseData.details %> 
       </p>
-      <a class="video-link dynamic-content-showcase" href="<%= showcaseData.videoLink %> ">
+      <a class="video-link dynamic-content-showcase" href="<%= site.projects.showcaseData.videoLink %> ">
         <i class="fab fa-youtube" aria-hidden="true"></i>
         Click here to watch the video
       </a>
@@ -33,7 +33,7 @@
       <p class="showcase-launchdate-date">
         <p class="showcase-launchdate-date dynamic-content-showcase">
           <span class="info-type">LAUNCH DATE</span>
-          <%= showcaseData.launchDate %> 
+          <%= site.projects.showcaseData.launchDate %> 
         </p>
       </p>
       <p class="showcase-launchdate-countdown">

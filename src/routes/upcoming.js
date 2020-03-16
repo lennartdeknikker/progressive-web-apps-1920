@@ -1,5 +1,5 @@
 const express = require('express');
-const Data = require('../data');
+const Data = require('../helpers/data');
 
 const router = express.Router();
 

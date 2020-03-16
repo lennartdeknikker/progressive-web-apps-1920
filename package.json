@@ -1,9 +1,10 @@
 {
-  "name": "expressgeneratortest",
+  "name": "spacex-launches",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "./bin/www"
+    "start": "./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

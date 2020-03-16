@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
   const bannerLink = await Data.banner();
   const showcaseData = await Data.showcase('latest');
   const listData = await Data.list('past');
-  console.log(listData);
 
   res.render('index', {
     title: 'Past launches',

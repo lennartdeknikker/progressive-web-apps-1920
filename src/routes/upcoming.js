@@ -6,9 +6,8 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', async (req, res) => {
   const bannerLink = await Data.banner();
-  const showcaseData = await Data.showcase('latest');
-  const listData = await Data.list('past');
-  console.log(listData);
+  const showcaseData = await Data.showcase('next');
+  const listData = await Data.list('upcoming');
 
   res.render('index', {
     title: 'Upcoming launches',

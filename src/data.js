@@ -43,7 +43,7 @@ const Data = {
       }),
     );
 
-    parsedData.sort((a, b) => (b.data.flight_number - a.data.flight_number));
+    parsedData.sort((a, b) => b.data.flightNumber - a.data.flightNumber);
     return parsedData;
   },
 

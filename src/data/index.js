@@ -9,8 +9,8 @@ const Index = {
           title: 'Upcoming launches',
           activeButton: 'upcoming',
           type: {
-            showcase: 'next',
-            list: 'upcoming',
+            showcase: 'Next',
+            list: 'Upcoming',
           },
         },
       },

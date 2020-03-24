@@ -9,8 +9,8 @@ const Past = {
           title: 'Past launches',
           activeButton: 'past',
           type: {
-            showcase: 'latest',
-            list: 'past',
+            showcase: 'Latest',
+            list: 'Past',
           },
         },
       },

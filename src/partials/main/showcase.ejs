@@ -16,9 +16,8 @@
           <%= site.pageData.showcaseData.launchSite %> 
         </li>
       </ul>
-      <% if (site.pageData.showcaseData.imageUrl !== '_') { %>
+      <% if (site.pageData.showcaseData.imageUrl && site.pageData.showcaseData.imageUrl.length > 2) { %>
         <div class="showcase-image-container">
-          <%= site.pageData.showcaseData.imageUrl %>
           <img class="dynamic-content-showcase" src="<%= site.pageData.showcaseData.imageUrl %> ">
         </div>
       <% } %>

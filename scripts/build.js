@@ -11,9 +11,9 @@ const distPath = './public';
 
 fse.emptyDirSync(distPath);
 
-fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
+fse.copy(`${srcPath}/assets`, distPath);
 
-async function createPages() {
+async function generatePages() {
   globP('**/*.ejs', { cwd: `${srcPath}/pages` })
     .then((files) => {
       files.forEach(async (file) => {
@@ -33,4 +33,4 @@ async function createPages() {
     .catch((err) => { console.error(err); });
 }
 
-createPages();
+generatePages();

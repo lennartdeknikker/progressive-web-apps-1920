@@ -16,16 +16,19 @@
           <%= site.pageData.showcaseData.launchSite %> 
         </li>
       </ul>
-      <div class="showcase-image-container">
-        <img class="dynamic-content-showcase" src="<%= site.pageData.showcaseData.imageUrl %> ">
-      </div>
+      <% if (site.pageData.showcaseData.imageUrl !== '_') { %>
+        <div class="showcase-image-container">
+          <%= site.pageData.showcaseData.imageUrl %>
+          <img class="dynamic-content-showcase" src="<%= site.pageData.showcaseData.imageUrl %> ">
+        </div>
+      <% } %>
     </div>
     <div class="showcase-details-container">
       <p class="dynamic-content-showcase">
         <%= site.pageData.showcaseData.details %> 
       </p>
       <a class="video-link dynamic-content-showcase" href="<%= site.pageData.showcaseData.videoLink %> ">
-        <i class="fab fa-youtube" aria-hidden="true"></i>
+        <img class="video-link-icon" src="images/video.png" alt="videolink">
         Click here to watch the video
       </a>
     </div>

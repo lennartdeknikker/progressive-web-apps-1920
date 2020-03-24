@@ -424,3 +424,9 @@ li[class^="detail-level"] {
     transform: translateX(10vw) rotate(0deg);
   }
 }
+
+.video-link-icon {
+  height: 1em;
+  position: relative;
+  top: 0.1em
+}

@@ -3,15 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "./bin/www",
+    "prestart": "npm run build",
     "serve": "serve ./public",
     "build": "node ./scripts/build",
-    "dev": "run-s build serve"
+    "dev": "run-s build serve",
+    "watch": "run-p watch:*",
+    "watch:js": "chokidar '**/*.js' -c 'npm run build'",
+    "watch:assets": "chokidar 'src/assets/**/*.*' -c 'npm run build'"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
     "ejs": "^2.6.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",

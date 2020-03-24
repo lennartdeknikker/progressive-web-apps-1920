@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="assets/stylesheets/main.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="stylesheets/main.css" />
+  <link rel="manifest" href="manifest.json">
   <title>SpaceX | Past launches</title>
 </head>
 
@@ -14,7 +15,7 @@
   <div class="header-text-wrapper">
   <a class="home-link" href="https://www.spacex.com/">
     <img
-      src="assets/images/spacex_logo_white.png"
+      src="images/spacex_logo_white.png"
       alt="SpaceX logo"
       class="header-logo-image"
     />
@@ -47,7 +48,7 @@
   <div class="banner">
   <div
     class="banner-background"
-    style="background: center bottom / cover no-repeat url( https://live.staticflickr.com/65535/49635401423_e0bef3e82f_o.jpg );"
+    style="background: center bottom / cover no-repeat url( https://live.staticflickr.com/65535/49672551378_fabc17ef6f_o.jpg );"
   >
     <div class="banner-filter">
       <blockquote>
@@ -65,7 +66,7 @@
       <ul class="showcase-titles-container">
         <li class="dynamic-content-showcase">
           <span class="info-type">MISSION</span>
-          91, CRS-20 
+          92, Starlink 5 
         </li>
         <li class="dynamic-content-showcase">
           <span class="info-type">ROCKET</span>
@@ -73,19 +74,22 @@
         </li>
         <li class="dynamic-content-showcase">
           <span class="info-type">LAUNCH SITE</span>
-          CCAFS SLC 40 
+          KSC LC 39A 
         </li>
       </ul>
-      <div class="showcase-image-container">
-        <img class="dynamic-content-showcase" src="https://images2.imgbox.com/53/22/dh0XSLXO_o.png ">
-      </div>
+      
+        <div class="showcase-image-container">
+          https://images2.imgbox.com/9a/96/nLppz9HW_o.png
+          <img class="dynamic-content-showcase" src="https://images2.imgbox.com/9a/96/nLppz9HW_o.png ">
+        </div>
+      
     </div>
     <div class="showcase-details-container">
       <p class="dynamic-content-showcase">
-        SpaceX&#39;s 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission brings essential supplies to the International Space Station using SpaceX&#39;s reusable Dragon spacecraft. It is the last scheduled flight of a Dragon 1 capsule. (CRS-21 and up under the new Commercial Resupply Services 2 contract will use Dragon 2.) The external payload for this mission is the Bartolomeo ISS external payload hosting platform. Falcon 9 and Dragon will launch from SLC-40, Cape Canaveral Air Force Station and the booster will land at LZ-1. The mission will be complete with return and recovery of the Dragon capsule and down cargo. 
+        The sixth Starlink launch overall and the fifth operational batch of Starlink satellites will launch into orbit aboard a Falcon 9 rocket. This mission is expected to deploy all sixty satellites into an elliptical orbit about fifteen minutes into flight. In the weeks following launch the satellites are expected to utilize their onboard ion thrusters to raise their orbits to 550 km in three groups of 20, making use of precession rates to separate themselves into three planes. The booster will land on a drone ship approximately 628 km downrange. 
       </p>
-      <a class="video-link dynamic-content-showcase" href="https://youtu.be/1MkcWK2PnsU ">
-        <i class="fab fa-youtube" aria-hidden="true"></i>
+      <a class="video-link dynamic-content-showcase" href="https://youtu.be/I4sMhHbHYXM ">
+        <img class="video-link-icon" src="images/video.png" alt="videolink">
         Click here to watch the video
       </a>
     </div>
@@ -93,7 +97,7 @@
       <p class="showcase-launchdate-date">
         <p class="showcase-launchdate-date dynamic-content-showcase">
           <span class="info-type">LAUNCH DATE</span>
-          07/03/2020 05:50 
+          18/03/2020 13:16 
         </p>
       </p>
       <p class="showcase-launchdate-countdown">
@@ -110,12 +114,42 @@
   <ol class="launches-list">
     
     <li
+      class="launches-list-item flight-92 "
+      data-flightnumber="92 "
+    >
+      <a
+        class="launch-link"
+        href="details/past/92 "
+        ><ul class="launches-list-item-details-list">
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Mission title: </span>Starlink 5
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Flight number: </span>92
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Rocket title: </span>Falcon 9
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch site: </span>KSC LC 39A
+          </li>
+          <li class="launches-list-item-details-list-item">
+            <span class="details-list-title">Launch date: </span>18/03/2020 13:16 05:50
+          </li>
+        </ul></a
+      >
+      
+      <img class="icon" src="https://images2.imgbox.com/9a/96/nLppz9HW_o.png " />
+      
+    </li>
+    
+    <li
       class="launches-list-item flight-91 "
       data-flightnumber="91 "
     >
       <a
         class="launch-link"
-        href="/details/past/91 "
+        href="details/past/91 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-20
@@ -145,7 +179,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/90 "
+        href="details/past/90 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Starlink 4
@@ -175,7 +209,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/89 "
+        href="details/past/89 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Starlink 3
@@ -205,7 +239,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/88 "
+        href="details/past/88 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Crew Dragon In Flight Abort Test
@@ -235,7 +269,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/87 "
+        href="details/past/87 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Starlink 2
@@ -265,7 +299,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/86 "
+        href="details/past/86 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>JCSat 18 / Kacific 1
@@ -295,7 +329,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/85 "
+        href="details/past/85 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-19
@@ -325,7 +359,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/84 "
+        href="details/past/84 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Starlink 1
@@ -355,7 +389,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/83 "
+        href="details/past/83 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Amos-17
@@ -385,7 +419,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/82 "
+        href="details/past/82 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-18
@@ -415,7 +449,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/81 "
+        href="details/past/81 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>STP-2
@@ -445,7 +479,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/80 "
+        href="details/past/80 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>RADARSAT Constellation
@@ -475,7 +509,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/79 "
+        href="details/past/79 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Starlink v0.9
@@ -505,7 +539,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/78 "
+        href="details/past/78 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-17
@@ -535,7 +569,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/77 "
+        href="details/past/77 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>ArabSat 6A
@@ -565,7 +599,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/76 "
+        href="details/past/76 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CCtCap Demo Mission 1
@@ -595,7 +629,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/75 "
+        href="details/past/75 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Nusantara Satu (PSN-6) / S5 / Beresheet
@@ -625,7 +659,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/74 "
+        href="details/past/74 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 8
@@ -655,7 +689,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/73 "
+        href="details/past/73 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>GPS III SV01
@@ -685,7 +719,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/72 "
+        href="details/past/72 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-16
@@ -715,7 +749,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/71 "
+        href="details/past/71 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SSO-A
@@ -745,7 +779,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/70 "
+        href="details/past/70 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Es’hail 2
@@ -775,7 +809,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/69 "
+        href="details/past/69 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SAOCOM 1A
@@ -805,7 +839,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/68 "
+        href="details/past/68 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Telstar 18V
@@ -835,7 +869,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/67 "
+        href="details/past/67 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Merah Putih
@@ -865,7 +899,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/66 "
+        href="details/past/66 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 7
@@ -895,7 +929,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/65 "
+        href="details/past/65 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Telstar 19V
@@ -925,7 +959,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/64 "
+        href="details/past/64 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-15
@@ -955,7 +989,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/63 "
+        href="details/past/63 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-12
@@ -985,7 +1019,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/62 "
+        href="details/past/62 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 6
@@ -1015,7 +1049,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/61 "
+        href="details/past/61 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Bangabandhu-1
@@ -1045,7 +1079,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/60 "
+        href="details/past/60 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>TESS
@@ -1075,7 +1109,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/59 "
+        href="details/past/59 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-14
@@ -1105,7 +1139,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/58 "
+        href="details/past/58 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 5
@@ -1135,7 +1169,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/57 "
+        href="details/past/57 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Hispasat 30W-6
@@ -1165,7 +1199,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/56 "
+        href="details/past/56 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Paz / Starlink Demo
@@ -1195,7 +1229,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/55 "
+        href="details/past/55 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Falcon Heavy Test Flight
@@ -1225,7 +1259,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/54 "
+        href="details/past/54 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-16 / GovSat-1
@@ -1255,7 +1289,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/53 "
+        href="details/past/53 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>ZUMA
@@ -1285,7 +1319,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/52 "
+        href="details/past/52 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 4
@@ -1315,7 +1349,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/51 "
+        href="details/past/51 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-13
@@ -1345,7 +1379,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/50 "
+        href="details/past/50 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>KoreaSat 5A
@@ -1375,7 +1409,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/49 "
+        href="details/past/49 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-11 / Echostar 105
@@ -1405,7 +1439,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/48 "
+        href="details/past/48 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 3
@@ -1435,7 +1469,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/47 "
+        href="details/past/47 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Boeing X-37B OTV-5
@@ -1465,7 +1499,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/46 "
+        href="details/past/46 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>FormoSat-5
@@ -1495,7 +1529,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/45 "
+        href="details/past/45 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-12
@@ -1525,7 +1559,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/44 "
+        href="details/past/44 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Intelsat 35e
@@ -1555,7 +1589,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/43 "
+        href="details/past/43 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 2
@@ -1585,7 +1619,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/42 "
+        href="details/past/42 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>BulgariaSat-1
@@ -1615,7 +1649,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/41 "
+        href="details/past/41 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-11
@@ -1645,7 +1679,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/40 "
+        href="details/past/40 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Inmarsat-5 F4
@@ -1675,7 +1709,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/39 "
+        href="details/past/39 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>NROL-76
@@ -1705,7 +1739,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/38 "
+        href="details/past/38 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-10
@@ -1735,7 +1769,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/37 "
+        href="details/past/37 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>EchoStar 23
@@ -1765,7 +1799,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/36 "
+        href="details/past/36 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-10
@@ -1795,7 +1829,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/35 "
+        href="details/past/35 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Iridium NEXT Mission 1
@@ -1825,7 +1859,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/34 "
+        href="details/past/34 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Amos-6
@@ -1855,7 +1889,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/33 "
+        href="details/past/33 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>JCSAT-16
@@ -1885,7 +1919,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/32 "
+        href="details/past/32 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-9
@@ -1915,7 +1949,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/31 "
+        href="details/past/31 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>ABS-2A / Eutelsat 117W B
@@ -1945,7 +1979,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/30 "
+        href="details/past/30 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Thaicom 8
@@ -1975,7 +2009,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/29 "
+        href="details/past/29 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>JCSAT-2B
@@ -2005,7 +2039,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/28 "
+        href="details/past/28 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-8
@@ -2035,7 +2069,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/27 "
+        href="details/past/27 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-9
@@ -2065,7 +2099,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/26 "
+        href="details/past/26 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Jason 3
@@ -2095,7 +2129,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/25 "
+        href="details/past/25 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>OG-2 Mission 2
@@ -2125,7 +2159,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/24 "
+        href="details/past/24 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-7
@@ -2155,7 +2189,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/23 "
+        href="details/past/23 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>TürkmenÄlem 52°E / MonacoSAT
@@ -2185,7 +2219,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/22 "
+        href="details/past/22 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-6
@@ -2215,7 +2249,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/21 "
+        href="details/past/21 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>ABS-3A / Eutelsat 115W B
@@ -2245,7 +2279,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/20 "
+        href="details/past/20 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>DSCOVR
@@ -2275,7 +2309,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/19 "
+        href="details/past/19 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-5
@@ -2305,7 +2339,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/18 "
+        href="details/past/18 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-4
@@ -2335,7 +2369,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/17 "
+        href="details/past/17 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>AsiaSat 6
@@ -2365,7 +2399,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/16 "
+        href="details/past/16 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>AsiaSat 8
@@ -2395,7 +2429,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/15 "
+        href="details/past/15 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>OG-2 Mission 1
@@ -2425,7 +2459,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/14 "
+        href="details/past/14 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-3
@@ -2455,7 +2489,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/13 "
+        href="details/past/13 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Thaicom 6
@@ -2485,7 +2519,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/12 "
+        href="details/past/12 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>SES-8
@@ -2515,7 +2549,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/11 "
+        href="details/past/11 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CASSIOPE
@@ -2545,7 +2579,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/10 "
+        href="details/past/10 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-2
@@ -2575,7 +2609,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/9 "
+        href="details/past/9 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>CRS-1
@@ -2605,7 +2639,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/8 "
+        href="details/past/8 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>COTS 2
@@ -2635,7 +2669,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/7 "
+        href="details/past/7 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>COTS 1
@@ -2665,7 +2699,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/6 "
+        href="details/past/6 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Falcon 9 Test Flight
@@ -2695,7 +2729,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/5 "
+        href="details/past/5 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>RazakSat
@@ -2725,7 +2759,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/4 "
+        href="details/past/4 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>RatSat
@@ -2755,7 +2789,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/3 "
+        href="details/past/3 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>Trailblazer
@@ -2785,7 +2819,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/2 "
+        href="details/past/2 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>DemoSat
@@ -2815,7 +2849,7 @@
     >
       <a
         class="launch-link"
-        href="/details/past/1 "
+        href="details/past/1 "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span>FalconSat
@@ -2851,6 +2885,17 @@
 </footer>
 
   </body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            return registration.update();
+          })
+      })
+    }
+  </script>
+  <script src="scripts/countdown.js"></script>
 </html>
 
-<script src="assets/scripts/countdown.js"></script>
+

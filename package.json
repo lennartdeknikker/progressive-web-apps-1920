@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "npm run build",
     "serve": "serve ./public",
-    "build": "node ./scripts/build",
+    "prebuild": "node ./scripts/minify",
+    "build": "node ./scripts/generate",
     "dev": "run-s build serve",
     "watch": "run-p watch:*",
     "watch:js": "chokidar '**/*.js' -c 'npm run build'",
@@ -14,6 +14,7 @@
   "dependencies": {
     "minify": "^5.1.1",
     "minify-css-stream": "^0.1.0",
+    "minify-html-stream": "^0.3.1",
     "minify-stream": "^1.2.1",
     "node-fetch": "^2.6.0"
   },

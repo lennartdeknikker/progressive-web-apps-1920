@@ -10,32 +10,24 @@ const globP = promisify(require('glob'));
 const srcPath = './src';
 const distPath = './public';
 
-fs.emptyDirSync(distPath);
-fs.copy(`${srcPath}/assets`, distPath);
-
 function minifyJsFiles() {
-  fs.mkdir(`${distPath}/scripts`);
-  globP('**/*.js', { cwd: `${srcPath}/assets/scripts` })
+  globP('**/*.js', { cwd: `${distPath}/scripts` })
     .then((jsFiles) => {
       jsFiles.forEach(async (jsFile) => {
-        console.log(jsFile);
         const fileData = path.parse(jsFile);
-        const readStream = fs.createReadStream(`${srcPath}/assets/scripts/${jsFile}`);
+        const readStream = fs.createReadStream(`${distPath}/scripts/${jsFile}`);
         const writeStream = fs.createWriteStream(`${distPath}/scripts/${fileData.name}.min.js`);
-
         readStream.pipe(minifyStream()).pipe(writeStream);
       });
     });
 }
 
 function minifyCssFiles() {
-  fs.mkdir(`${distPath}/stylesheets`);
-  globP('**/*.css', { cwd: `${srcPath}/assets/stylesheets` })
+  globP('**/*.css', { cwd: `${distPath}/stylesheets` })
     .then((cssFiles) => {
       cssFiles.forEach(async (cssFile) => {
-        console.log(cssFile);
         const fileData = path.parse(cssFile);
-        const readStream = fs.createReadStream(`${srcPath}/assets/stylesheets/${cssFile}`);
+        const readStream = fs.createReadStream(`${distPath}/stylesheets/${cssFile}`);
         const writeStream = fs.createWriteStream(`${distPath}/stylesheets/${fileData.name}.min.css`);
 
         readStream.pipe(minifyCssStream()).pipe(writeStream);
@@ -44,20 +36,18 @@ function minifyCssFiles() {
 }
 
 function minifyHtmlFiles() {
-  fs.mkdir(`${distPath}/pages`);
-  globP('**/*.html', { cwd: `${srcPath}` })
+  globP('**/*.html', { cwd: `${distPath}` })
     .then((htmlFiles) => {
       htmlFiles.forEach(async (htmlFile) => {
         console.log(htmlFile);
         const fileData = path.parse(htmlFile);
-        const readStream = fs.createReadStream(`${srcPath}/${htmlFile}`);
-        const writeStream = fs.createWriteStream(`${distPath}/pages/${fileData.name}.min.css`);
+        const readStream = fs.createReadStream(`${distPath}/${htmlFile}`);
+        const writeStream = fs.createWriteStream(`${distPath}/${fileData.name}.html`);
 
         readStream.pipe(new MinifyHtmlStream()).pipe(writeStream);
       });
     });
 }
-
 
 minifyJsFiles();
 minifyCssFiles();

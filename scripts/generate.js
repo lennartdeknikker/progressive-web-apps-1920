@@ -9,6 +9,9 @@ const createDataObject = require('../site.config');
 const srcPath = './src';
 const distPath = './public';
 
+fs.emptyDirSync(distPath);
+fs.copy(`${srcPath}/assets`, distPath);
+
 async function generatePages() {
   globP('**/*.ejs', { cwd: `${srcPath}/pages` })
     .then((files) => {
@@ -21,7 +24,7 @@ async function generatePages() {
           .then(() => ejsRenderFile(`${srcPath}/pages/${file}`, { ...config }))
           .then((pageContents) => ejsRenderFile(`${srcPath}/layouts/index.ejs`, { ...config, body: pageContents }))
           .then((layoutContent) => {
-            fs.writeFile(`${destPath}/${fileData.name}.html`, layoutContent);
+            fs.writeFile(`${destPath}/pages/${fileData.name}.html`, layoutContent);
           })
           .catch((err) => { console.error(err); });
       });

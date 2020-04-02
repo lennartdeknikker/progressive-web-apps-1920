@@ -2,7 +2,7 @@
 
 This application provides an overview of all past and upcoming SpaceX Rocket launches. On the one page it showcases the next launch with a countdown timer and some info on the mission, launch site and rocket type as well as a list of all upcoming launches. On the second page, it showcases the latest rocket launch as well as a list of all past launches.
 
-![screenshot](./wiki-assets/screenshots/homepage.png)
+![screenshot](./wiki-resources/screenshots/homepage.png)
 
 ## Contents
 1. [Installation](#Installation)

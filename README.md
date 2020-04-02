@@ -16,10 +16,11 @@ This application provides an overview of all past and upcoming SpaceX Rocket lau
 
 ## Installation
 To work on this project, 
-1. First clone this repo with `git clone https://github.com/lennartdeknikker/web-app-from-scratch-1920.git`. 
-2. I recommend using http server for live preview without getting out redundant API requests. To install http-server, run `npm install http-server -g`
+1. First clone this repo with `git clone https://github.com/lennartdeknikker/progressive-web-apps-1920.git`. 
+2. Install the necessary dependencies with `npm install`
+3. Run `npm run dev` to build and serve the page.
 
-That's it. You don't need to get an API key or install any dependencies. Happy coding!
+That's it. You don't need to get an API key.
 
 ## Features
 This application features:
@@ -101,8 +102,13 @@ I Implemented a service worker, to cache files and make the website load faster.
 ### Used tools & Test results
 #### Webpagetest.org
 This tool tests the performance of a webpage, shows the results and provides useful tips to increase performance.
+![webpagetest result](wiki-resources/audits/webpagetest-results.png)
+![webpagetest waterfall](wiki-resources/audits/webpagetest-waterfall.png)
 
 #### Lighthouse
+![lighthouse result](wiki-resources/audits/lighthouse.png)
+##### Performance
+![performance result](wiki-resources/audits/performance.png)
 
 ## Conclusions
 ### What I've learned

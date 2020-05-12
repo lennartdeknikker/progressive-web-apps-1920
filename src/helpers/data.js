@@ -46,12 +46,6 @@ const Data = {
     parsedData.sort((a, b) => b.data.flightNumber - a.data.flightNumber)
     return parsedData
   },
-
-  async details(flightNumber) {
-    const data = await Api.get(flightNumber)
-    console.log('details data', data)
-    
-  }
 }
 
 module.exports = Data

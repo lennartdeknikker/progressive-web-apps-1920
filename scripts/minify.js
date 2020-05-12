@@ -38,12 +38,9 @@ function minifyHtmlFiles() {
   globP('**/*.html', { cwd: `${distPath}` })
     .then((htmlFiles) => {      
       htmlFiles.forEach(async (htmlFile) => {
-        const fileName = htmlFile.replace('pages/', '')
-        console.log(fileName)
-        const fileData = path.parse(htmlFile)
-        const destPath = `${distPath}/${fileName}`
-        console.log(destPath)
         
+        const fileName = htmlFile.replace('pages/', '')
+        const destPath = `${distPath}/${fileName}`
         const readStream = fs.createReadStream(`${distPath}/${htmlFile}`)
         const writeStream = fs.createWriteStream(destPath)
 

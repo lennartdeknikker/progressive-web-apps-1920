@@ -7,6 +7,7 @@ const globP = promisify(require('glob'))
 const createDataObject = require('../site.config')
 
 const Api = require('../src/helpers/api')
+const Utilities = require('../src/helpers/utilities')
 
 const srcPath = './src'
 const distPath = './public'
@@ -17,7 +18,7 @@ fs.copy(`${srcPath}/assets`, distPath)
 async function generatePages() {
   globP('**/[!_]*.ejs', { cwd: `${srcPath}/pages` })
     .then((files) => {
-      console.log('static:', files)
+      console.log('generating static pages:', files)
       
       files.forEach(async (file) => {
         const config = await createDataObject(file.slice(0, -4))
@@ -37,20 +38,25 @@ async function generatePages() {
 }
 
 async function generateDynamicPages() {
+  
+  console.log('generating dynamic pages.')
+
   const dynamicFiles = await globP('**/_*.ejs', { cwd: `${srcPath}/pages` })
   const file = dynamicFiles[0]
   const fileName = file.slice(0, -4).replace('_', '')
-  const fileData = path.parse(file)
   const destPath = path.join(distPath, 'pages', fileName)
+  const flightDataPath = path.join(distPath, 'flights')
 
   
   await fs.mkdirs(destPath)
+  await fs.mkdirs(flightDataPath)
 
 
   Api.get().then((allLaunches) => {
     console.log('obtained data for', allLaunches.length, 'launches')
     allLaunches.forEach(async (launch) => {      
       const config = await createDataObject(fileName, launch)
+      fs.writeFile(`${flightDataPath}/${launch.flight_number}.js`, 'const data = ' + JSON.stringify(launch))
       
       ejsRenderFile(`${srcPath}/pages/${file}`, { ...config })
         .then((pageContents) => ejsRenderFile(`${srcPath}/layouts/details.ejs`, { ...config, body: pageContents }))
@@ -61,6 +67,7 @@ async function generateDynamicPages() {
     })
   })
 }
+
 
 generatePages()
 generateDynamicPages()

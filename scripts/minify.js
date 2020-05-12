@@ -36,18 +36,24 @@ function minifyCssFiles() {
 
 function minifyHtmlFiles() {
   globP('**/*.html', { cwd: `${distPath}` })
-    .then((htmlFiles) => {
+    .then((htmlFiles) => {      
       htmlFiles.forEach(async (htmlFile) => {
-        console.log(htmlFile)
+        const fileName = htmlFile.replace('pages/', '')
+        console.log(fileName)
         const fileData = path.parse(htmlFile)
+        const destPath = `${distPath}/${fileName}`
+        console.log(destPath)
+        
         const readStream = fs.createReadStream(`${distPath}/${htmlFile}`)
-        const writeStream = fs.createWriteStream(`${distPath}/${fileData.name}.html`)
+        const writeStream = fs.createWriteStream(destPath)
 
         readStream.pipe(new MinifyHtmlStream()).pipe(writeStream)
       })
     })
 }
 
+
+fs.mkdirs(`${distPath}/details`)
 minifyJsFiles()
 minifyCssFiles()
 minifyHtmlFiles()

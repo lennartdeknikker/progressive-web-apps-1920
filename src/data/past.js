@@ -1,4 +1,4 @@
-const Data = require('../helpers/data');
+const Data = require('../helpers/data')
 
 const Past = {
   async getData() {
@@ -14,18 +14,18 @@ const Past = {
           },
         },
       },
-    };
+    }
 
-    const showcaseData = await Data.showcase('latest');
-    const listData = await Data.list('past');
-    const bannerData = await Data.banner();
+    const showcaseData = await Data.showcase('latest')
+    const listData = await Data.list('past')
+    const bannerData = await Data.banner()
 
-    data.site.pageData.showcaseData = showcaseData;
-    data.site.pageData.listData = listData;
-    data.site.pageData.bannerLink = bannerData;
+    data.site.pageData.showcaseData = showcaseData
+    data.site.pageData.listData = listData
+    data.site.pageData.bannerLink = bannerData
 
-    return data;
+    return data
   },
-};
+}
 
-module.exports = Past;
+module.exports = Past

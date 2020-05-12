@@ -3,12 +3,10 @@
   <ol class="launches-list">
     <% for( let launchItem of site.pageData.listData ) { %>
     <li
-      class="launches-list-item flight-<%= launchItem.data.flightNumber %> "
+      class="launches-list-item flight-<%= launchItem.data.flightNumber %>"
       data-flightnumber="<%= launchItem.data.flightNumber %> "
     >
-      <a
-        class="launch-link"
-        href="details/<%= site.pageData.type.list %>/<%= launchItem.data.flightNumber %> "
+      <a class="launch-link" href="details/<%= launchItem.data.flightNumber %> "
         ><ul class="launches-list-item-details-list">
           <li class="launches-list-item-details-list-item">
             <span class="details-list-title">Mission title: </span><%=

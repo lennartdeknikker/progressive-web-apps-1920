@@ -1,16 +1,21 @@
-const Index = require('./src/data/index');
-const Past = require('./src/data/past');
+const Index = require('./src/data/index')
+const Past = require('./src/data/past')
+const Details = require('./src/data/details')
 
-async function createDataObject(pageTitle) {
+async function createDataObject(pageTitle, flightData) {
   if (pageTitle === 'index') {
-    return Index.getData();
+    return Index.getData()
   }
 
   if (pageTitle === 'past') {
-    return Past.getData();
+    return Past.getData()
   }
 
-  return 'nothing here';
+  if (pageTitle === 'details' && flightData) {
+    return Details.getData(flightData)    
+  }
+  
+  return 'nothing here'
 }
 
-module.exports = createDataObject;
+module.exports = createDataObject

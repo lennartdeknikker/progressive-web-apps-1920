@@ -1,4 +1,4 @@
-const Data = require('../helpers/data');
+const Data = require('../helpers/data')
 
 const Index = {
   async getData() {
@@ -14,18 +14,18 @@ const Index = {
           },
         },
       },
-    };
+    }
 
-    const showcaseData = await Data.showcase('next');
-    const listData = await Data.list('upcoming');
-    const bannerData = await Data.banner();
+    const showcaseData = await Data.showcase('next')
+    const listData = await Data.list('upcoming')
+    const bannerData = await Data.banner()
 
-    data.site.pageData.showcaseData = showcaseData;
-    data.site.pageData.listData = listData;
-    data.site.pageData.bannerLink = bannerData;
+    data.site.pageData.showcaseData = showcaseData
+    data.site.pageData.listData = listData
+    data.site.pageData.bannerLink = bannerData
 
-    return data;
+    return data
   },
-};
+}
 
-module.exports = Index;
+module.exports = Index

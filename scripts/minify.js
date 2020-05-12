@@ -7,7 +7,6 @@ const MinifyHtmlStream = require('minify-html-stream').Minifier;
 const { promisify } = require('util');
 const globP = promisify(require('glob'));
 
-const srcPath = './src';
 const distPath = './public';
 
 function minifyJsFiles() {

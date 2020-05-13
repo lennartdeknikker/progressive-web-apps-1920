@@ -7,7 +7,6 @@ const globP = promisify(require('glob'))
 const createDataObject = require('../site.config')
 
 const Api = require('../src/helpers/api')
-const Utilities = require('../src/helpers/utilities')
 
 const srcPath = './src'
 const distPath = './public'

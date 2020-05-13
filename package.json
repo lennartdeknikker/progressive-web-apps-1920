@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "serve ./public",
-    "build": "node ./scripts/generate",
-    "postbuild": "node ./scripts/minify",
+    "build": "node ./build/generate",
+    "postbuild": "node ./build/minify",
     "dev": "run-s build serve",
     "watch": "run-p watch:*",
     "watch:js": "chokidar '**/*.js' -c 'npm run build'",

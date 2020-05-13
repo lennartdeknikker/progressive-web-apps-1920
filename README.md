@@ -1,6 +1,6 @@
 # SpaceX History
 
-This application provides an overview of all past and upcoming SpaceX Rocket launches. On the one page it showcases the next launch with a countdown timer and some info on the mission, launch site and rocket type as well as a list of all upcoming launches. On the second page, it showcases the latest rocket launch as well as a list of all past launches.
+This application provides an overview of all past and upcoming SpaceX Rocket launches. On the one page it showcases the next launch with a countdown timer and some info on the mission, launch site and rocket type as well as a list of all upcoming launches. On the second page, it showcases the latest rocket launch as well as a list of all past launches. By clicking on any launch, more technical details can be revealed.
 
 ![screenshot](./wiki-resources/screenshots/homepage.png)
 
@@ -20,7 +20,7 @@ To work on this project,
 2. Install the necessary dependencies with `npm install`
 3. Run `npm run dev` to build and serve the page.
 
-That's it. You don't need to get an API key.
+That's it. You don't need to get an API key since SpaceX provides a public one.
 
 ## Features
 This application features:
@@ -28,6 +28,7 @@ This application features:
 * [x] An element showcasing details on the next launch with a countdown timer. 
 * [x] Toggling between past and future launches.
 * [x] A list with detailed information on past and future launches.
+* [x] Pages showing technical details for all launches.
 * [ ] Search input to filter on launch data.
 
 ## API
@@ -66,18 +67,12 @@ https://docs.spacexdata.com/
 - node-fetch 2.6.0
 
 ### Development
-#### To watch file changes
-- chokidar-cli 2.1.0
-#### Templating engine
-- ejs 2.6.2
-#### Linter
-- eslint 6.8.0
-#### file system changes
-- fs-extra 8.1.0
-#### to obtain file names
-- glob 7.1.6
-#### to combine multiple npm script commands
-- npm-run-all 4.1.5
+- **To watch file changes**: chokidar-cli 2.1.0
+- **Templating engine**: ejs 2.6.2
+- **Linter**: eslint 6.8.0
+- **file system changes**: fs-extra 8.1.0
+- **to obtain file names**: glob 7.1.6
+- **to combine multiple npm script commands**: npm-run-all 4.1.5
 
 ## Performance Optimization
 
@@ -109,6 +104,8 @@ This tool tests the performance of a webpage, shows the results and provides use
 ![lighthouse result](wiki-resources/audits/lighthouse.png)
 ##### Performance
 ![performance result](wiki-resources/audits/performance.png)
+
+For more details on the performance optimizations I applied, please check out [this wiki page]()
 
 ## Conclusions
 ### What I've learned

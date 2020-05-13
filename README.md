@@ -11,8 +11,9 @@ This application provides an overview of all past and upcoming SpaceX Rocket lau
 4. [Actors and Interactions](#Actors-and-Interactions)
 5. [Dependencies](#Dependencies)
 6. [Performance optimization](#Performance-optimization)
-7. [Conclusions](#Conclusions)
-8. [License](#License)
+7. [Wiki](#wiki)
+8. [Conclusions](#Conclusions)
+9. [License](#License)
 
 ## Installation
 To work on this project, 
@@ -105,7 +106,9 @@ This tool tests the performance of a webpage, shows the results and provides use
 ##### Performance
 ![performance result](wiki-resources/audits/performance.png)
 
-For more details on the performance optimizations I applied, please check out [this wiki page]()
+## Wiki
+For more details on the performance optimizations I applied, please check out [this wiki page](https://github.com/lennartdeknikker/progressive-web-apps-1920/wiki/Performance-Optimization)
+For more details on the application of a service worker, please check out [this wiki page](https://github.com/lennartdeknikker/progressive-web-apps-1920/wiki/Service-Worker-Implementation)
 
 ## Conclusions
 ### What I've learned

@@ -71,4 +71,51 @@ const Utilities = {
   },
 }
 
-module.exports = Utilities
+function addDataToList(data, list, startLevel) {
+  Object.keys(data).forEach((property) => {
+    if (data[property] !== null && typeof data[property] !== 'object') {
+      const propertySpan = Utilities.createNewElement(
+        'span',
+        `detail-property-${startLevel}`,
+        `${Utilities.capitalize(property.replace(/_/g, ' '))}: `,
+      )
+      let detailSpan = ''
+      if (Utilities.checkForLink(data[property])) {
+        detailSpan = Utilities.createNewElement(
+          'a',
+          'detail-data detail-data-link',
+          `${data[property]}`,
+        )
+        detailSpan.href = data[property]
+      } else {
+        detailSpan = Utilities.createNewElement(
+          'span',
+          'detail-data',
+          `${data[property]}`,
+        )
+      }
+      const newLi = Utilities.createNewElement(
+        'li',
+        `detail-level-${startLevel}`,
+        '',
+        propertySpan,
+      )
+
+      newLi.appendChild(detailSpan)
+      list.appendChild(newLi)
+    } else
+
+    if (data[property] !== null && typeof data[property] === 'object') {
+      const newSubUl = Utilities.createNewElement('ul', `property-list-sub-list-${startLevel + 1}`)
+      const subListTitle = Utilities.createNewElement('li', 'sub-list-title', `${Utilities.capitalize(property.replace(/_/g, ' '))}: `)
+      list.appendChild(subListTitle)
+      addDataToList(data[property], newSubUl, startLevel + 1)
+      list.appendChild(newSubUl)
+    }
+  })
+}
+
+// create a new list element and add all data to it.
+const listInDocument = document.querySelector('#details-list')
+// eslint-disable-next-line no-undef
+addDataToList(data, listInDocument, 1)

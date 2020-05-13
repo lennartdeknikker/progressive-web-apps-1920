@@ -1,16 +1,16 @@
-const Api = require('./api');
-const Utilities = require('./utilities');
+const Api = require('./api')
+const Utilities = require('./utilities')
 
 const Data = {
 
   async banner() {
-    const data = await Api.get('latest');
-    const randomImageIndex = Math.floor(Math.random() * data.links.flickr_images.length);
-    return data.links.flickr_images[randomImageIndex];
+    const data = await Api.get('latest')
+    const randomImageIndex = Math.floor(Math.random() * data.links.flickr_images.length)
+    return data.links.flickr_images[randomImageIndex]
   },
 
   async showcase(type) {
-    const data = await Api.get(type);
+    const data = await Api.get(type)
     return ({
       imageUrl: data.links.mission_patch_small,
       missionTitle: data.mission_name,
@@ -21,11 +21,11 @@ const Data = {
       launchDateRaw: new Date(data.launch_date_unix * 1000),
       details: data.details,
       videoLink: data.links.video_link,
-    });
+    })
   },
 
   async list(selector) {
-    const data = await Api.get(selector);
+    const data = await Api.get(selector)
     const parsedData = data.map(
       (element) => ({
         links: {
@@ -41,16 +41,11 @@ const Data = {
           launchDate: Utilities.normalizeDate(element.launch_date_unix),
         },
       }),
-    );
+    )
 
-    parsedData.sort((a, b) => b.data.flightNumber - a.data.flightNumber);
-    return parsedData;
+    parsedData.sort((a, b) => b.data.flightNumber - a.data.flightNumber)
+    return parsedData
   },
+}
 
-  async detailView(selector) {
-    return Api.get(selector);
-  },
-
-};
-
-module.exports = Data;
+module.exports = Data

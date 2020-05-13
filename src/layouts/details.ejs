@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include ../partials/head %>
+  <link rel="stylesheet" href="/stylesheets/details.min.css" />
+  <script src="/flights/<%= site.pageData.detailsData.flight_number %>.js"></script>
+  <body>
+    <% include ../partials/header %>
+    <div class="detailview">
+      <h2 class="detailview-title">
+        <%= site.pageData.detailsData.mission_name %>
+      </h2>
+      <ul id="details-list" class="property-list"></ul>
+    </div>
+
+    <% include ../partials/footer %>
+    <script src="/scripts/generate-list.min.js"></script>
+  </body>
+</html>
